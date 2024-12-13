@@ -27,6 +27,7 @@ The VaR calculation allows specifying a confidence interval as a decimal (e.g., 
 
 ## Output Reporting:
 After computations, a summary CSV (risk_summary_ouput.csv) is produced, containing the computed metrics. This can easily be integrated into downstream reporting systems or dashboards.
+NOTE: function timer decorator added (helper function) -> @func_timer
 
 ## Project Structure
 1. Reads the positions file.

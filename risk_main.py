@@ -7,13 +7,14 @@ import logging
 import pandas as pd
 from positions_reader import read_pos_file
 from risk_calc import RiskCalculator
+from nhc_helper import func_timer
 
 # Configure logging
 logging.basicConfig(
     level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-
+@func_timer
 def main(source_pos_filepath: str):
     """
     Description:
