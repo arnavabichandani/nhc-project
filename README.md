@@ -1,6 +1,6 @@
 # nhc-project
 
-RISK ANALYTICS PIPELINE 
+## RISK ANALYTICS PIPELINE 
 
 ## Overview
 This project provides a simple, modular risk analytics pipeline for a portfolio of positions. Given a CSV file containing positions and their associated attributes, the pipeline computes several key risk metrics, including:
@@ -34,11 +34,12 @@ After computations, a summary CSV (risk_summary_ouput.csv) is produced, containi
 3. Generates the output CSV file containing the summary of risk metrics.
 requirements.txt: Lists the Python dependencies needed [pandas, logging].
 
-## Potential Modifications to Risk Metrics
+## Potential Modifications to Risk Metrics -
 - Generating a better VaR measure using primary data so we can amend other potential parameters such as - half life, lookback period, var type (historical, parametric, Monte-Carlo)
+    - 3m Max VaR (For tracking purposes)
     - Contribution / Incremental VaR for underlying components of portfolio
 - Generating factor specifics (type of factor)
-- Performance Metrics (Sharpe, Calmar, Sortino, Drawdown measures, Kelly Criterion etc.)
+- Performance Metrics (Sharpe, Calmar, Sortino, Kelly Criterion etc.)
     - Check (quantstats lib.)
 - Expected Shortfall
 - Stress Loss (Shocks applied to net exposure & gross-net)
@@ -46,6 +47,13 @@ requirements.txt: Lists the Python dependencies needed [pandas, logging].
 NOTE: This report also is dependent on the desired output by the investment team and top mangement.
 - Correlations (within portfolio & vs other indices)
 - Tracking error
+- Rolling Volatility (Overall Portfolio & components)
+- Drawdown - 
+    - Peak to trough
+    - Peak to current
+- VaR % Working Capital
 - Beta
+- Kurtosis
+- Return $ (DTD, MTD, YTD, 1Y, 3Y, 10Y, LTD)
 - Liquidity risk measures
 - Hit ratios / Best & Worst 1m / Rolling Avg. etc. 
